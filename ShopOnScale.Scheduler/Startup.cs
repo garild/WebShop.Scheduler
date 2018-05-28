@@ -37,7 +37,7 @@ namespace ShopOnScale.Scheduler
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IApplicationLifetime lifetime)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IApplicationLifetime lifetime, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -45,6 +45,9 @@ namespace ShopOnScale.Scheduler
             }
 
             app.StartJobs();
+
+            //To tylko taki przykładowy test, nie powinno się tak tego robić ;)
+            loggerFactory.NLogerTest();
         }
 
     }

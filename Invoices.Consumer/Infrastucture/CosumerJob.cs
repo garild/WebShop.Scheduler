@@ -1,9 +1,6 @@
 ﻿using FluentScheduler;
 using Invoices.Consumer.Infrastucture.Interface;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace Invoices.Consumer.Infrastucture
 {
